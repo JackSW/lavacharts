@@ -38,6 +38,7 @@ class AreaChart extends Chart
                 'focusTarget',
                 'hAxis',
                 'isHtml',
+                'isStacked',
                 'interpolateNulls',
                 'lineWidth',
                 'pointSize',
