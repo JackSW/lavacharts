@@ -165,12 +165,21 @@ class AreaChart extends Chart
      */
     public function isStacked($isStacked)
     {
-        if (is_bool($isStacked)) {
+        $values = array(
+            'true',
+            'false',
+            'percent',
+            'relative',
+            'absolute'
+        );
+
+        if (is_bool($isStacked) || Utils::nonEmptyStringInArray($isStacked, $values)) {
             $this->addOption(array('isStacked' => $isStacked));
         } else {
             throw $this->invalidConfigValue(
                 __FUNCTION__,
-                'bool'
+                'bool | string',
+                'must be one of '.Utils::arrayToPipedString($values)
             );
         }
 
