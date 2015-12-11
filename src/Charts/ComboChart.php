@@ -44,6 +44,7 @@ class ComboChart extends Chart
                 'focusTarget',
                 'hAxis',
                 'isHtml',
+                'isStacked',
                 'series',
                 'seriesType',
                 'vAxes',
